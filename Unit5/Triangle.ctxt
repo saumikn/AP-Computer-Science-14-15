@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=left\ right\ bottom
+comment0.target=Triangle(int,\ int,\ int)
+comment0.text=\r\n\ Constructor\ of\ triangle\ object\r\n\ \r\n\ @param\ \ \ left\ \ \ \ The\ color\ of\ the\ left\ side\r\n\ @param\ \ \ right\ \ \ The\ color\ of\ the\ right\ side\r\n\ @param\ \ \ bottom\ \ The\ color\ of\ the\ bottom\ side\r\n
+comment1.params=
+comment1.target=int\ getLeft()
+comment1.text=\r\n\ Gets\ the\ color\ of\ the\ left\ side\r\n\ \r\n\ @return\ \ \ \ \ \ The\ color\ of\ the\ left\ side\r\n
+comment2.params=
+comment2.target=int\ getRight()
+comment2.text=\r\n\ Gets\ the\ color\ of\ the\ right\ side\r\n\ \r\n\ @return\ \ \ \ \ \ The\ color\ of\ the\ right\ side\r\n
+comment3.params=
+comment3.target=int\ getBottom()
+comment3.text=\r\n\ Gets\ the\ color\ of\ the\ down\ side\r\n\ \r\n\ @return\ \ \ \ \ \ The\ color\ of\ the\ down\ side\r\n
+comment4.params=tri
+comment4.target=int\ equalTo(Triangle)
+comment4.text=\r\n\ Determines\ the\ relationship\ between\ this\ triangle\ and\ another\ triangle\r\n\ \r\n\ @param\ \ \ tri\ \ \ \ \ The\ triangle\ to\ be\ compared\ to\r\n\ @return\ \ \ \ \ \ \ \ \ \ -1\ if\ triangles\ are\ never\ equal,\ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0\ if\ triangles\ are\ equal,\ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1\ if\ other\ triangle\ is\ 1\ clockwise\ rotation\ past\ this\ triangle,\ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 2\ if\ other\ triangle\ is\ 2\ clockwise\ rotations\ past\ this\ triangle\r\n
+numComments=5

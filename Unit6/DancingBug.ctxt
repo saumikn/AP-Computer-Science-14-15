@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=dance
+comment0.target=DancingBug(int[])
+comment0.text=\r\n\ Constructs\ a\ dancing\ bug\ that\ traces\ a\ square\ of\ a\ given\ side\ length\r\n\ @param\ dance\ the\ array\ which\ tells\ the\ bug\ how\ to\ dance\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Moves\ according\ to\ the\ array\r\n
+numComments=2

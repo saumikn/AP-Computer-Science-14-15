@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=die1\ die2
+comment0.target=TwoDice(int,\ int)
+comment1.params=die
+comment1.target=int\ value(int)
+comment1.text=\r\n\ Set\ the\ length\ side\ of\ the\ Rectangle.\r\n\ \r\n\ @param\ \ \ which\ dice\ is\ the\ value\ taken\ from\r\n\ @return\ \ the\ value\ of\ the\ dice\r\n
+comment2.params=
+comment2.target=int\ dieSum()
+comment2.text=\r\n\ Finds\ the\ sum\ of\ the\ dice\ roll\r\n\ \r\n\ @return\ \ the\ value\ of\ the\ dice\ roll\ sum\r\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment3.text=\r\n\ Creates\ a\ summary\ of\ the\ dice\r\n\ \r\n\ @return\ \ A\ string\ that\ summarizes\ the\ dice\ roll\r\n
+numComments=4
