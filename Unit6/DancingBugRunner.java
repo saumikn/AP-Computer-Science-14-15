@@ -11,11 +11,11 @@ import java.awt.Color;
  */
 public class DancingBugRunner
 {
-    public static void main(String[] args)
+    public static void main()
     {
         UnboundedGrid g = new UnboundedGrid();
         ActorWorld world = new ActorWorld(g);
-        int[] a = randomArray(10);
+        int[] a = randomArray(100);
         
         
         
