@@ -1,8 +1,20 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ main()
-comment1.params=size
-comment1.target=int[]\ randomArray(int)
-comment2.params=number
-comment2.target=int\ randomInt(int)
-numComments=3
+comment0.text=\n\ This\ method\ creates\ a\ randomized\ array,\ sorts\ it\ ascending,\n\ re-randomizes\ the\ array,\ and\ sorts\ it\ descending\n
+comment1.params=a
+comment1.target=void\ printArray(int[])
+comment1.text=\n\ This\ methods\ prints\ an\ array\n\ @param\ a\ The\ array\ to\ be\ printed\n
+comment2.params=a
+comment2.target=int[]\ sortArrayUp(int[])
+comment2.text=\n\ This\ methods\ prints\ an\ array\n\ @param\ a\ The\ array\ to\ be\ printed\n
+comment3.params=a
+comment3.target=int[]\ sortArrayDown(int[])
+comment3.text=\n\ This\ methods\ prints\ an\ array\n\ @param\ a\ The\ array\ to\ be\ printed\n
+comment4.params=size
+comment4.target=int[]\ randomArray(int)
+comment4.text=\n\ This\ methods\ prints\ an\ array\n\ @param\ a\ The\ array\ to\ be\ printed\n
+comment5.params=number
+comment5.target=int\ randomInt(int)
+comment5.text=\n\ This\ methods\ prints\ an\ array\n\ @param\ a\ The\ array\ to\ be\ printed\n
+numComments=6
