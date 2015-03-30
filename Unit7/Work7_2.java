@@ -5,9 +5,9 @@ package Unit7;
  * and sorts them increasing and decreasing, respectively
  * 
  * @author Saumik Narayanan
- * @version 3/17/15
+ * @version 3/29/15
  */
-public class Work7_1
+public class Work7_2
 {
     /**
      * This method creates a randomized array, sorts it ascending,
@@ -18,40 +18,69 @@ public class Work7_1
     {
         int length = 16;
         int[] a = randomArray(length);
-        
         printArray(a);
-        sortArrayUp(a);
+        sortBubbleUp(a);
         printArray(a);
-        System.out.println();
-        
-        a = randomArray(length);
+        sortBubbleDown(a);
         printArray(a);
-        sortArrayDown(a);
-        printArray(a);
-        System.out.println();
-        
         
 
-    }
-    
-    /**
-     * This methods prints an array
-     * @param a The array to be printed
-     */
-    public static void printArray(int[] a)
-    {
-        for(int i = 0; i < a.length; i++)
-        {
-            System.out.print(a[i] + " ");
-        }
-        System.out.println();
     }
     
     /**
      * This methods sorts an array descending
      * @param a The array to be sorted
      */
-    public static int[] sortArrayUp(int[] a)
+    public static int[] sortSelectionUp(int[] a)
+    {
+        int i;
+        int tmp;
+        int min;
+        
+        for(int j = 0; j < a.length - 1; j++)
+        {
+            min = j;
+            for(int i = j + 1; i < a.length - 1; i++)
+            {
+                if(a[i] < a[min])
+                {
+                    min = i;
+                }
+            }
+            tmp = a[min];
+            a[min] = a[j];
+            a[j] = tmp;
+            
+        }
+        return a;
+    }
+    
+    /**
+     * This methods sorts an array descending
+     * @param a The array to be sorted
+     */
+    public static int[] sortSelectionDown(int[] a)
+    {
+        for(int pass = 0; pass < a.length; pass++)
+        {
+            for(int i = 0; i < a.length - 1; i++)
+            {
+                if(a[i] < a[i+1])
+                {
+                    int tmp = a[i];
+                    a[i] = a[i+1];
+                    a[i+1] = tmp;
+                }
+            }
+        }
+        return a;
+    }
+    
+    /**
+     * This methods sorts an array descending
+     * @param a The array to be sorted
+     */
+    public static int[] sortBubbleUp(int[] a)
     {
         for(int pass = 0; pass < a.length; pass++)
         {
@@ -72,7 +101,7 @@ public class Work7_1
      * This methods sorts an array descending
      * @param a The array to be sorted
      */
-    public static int[] sortArrayDown(int[] a)
+    public static int[] sortBubbleDown(int[] a)
     {
         for(int pass = 0; pass < a.length; pass++)
         {
@@ -88,7 +117,20 @@ public class Work7_1
         }
         return a;
     }
-
+    
+    /**
+     * This methods prints an array
+     * @param a The array to be printed
+     */
+    public static void printArray(int[] a)
+    {
+        for(int i = 0; i < a.length; i++)
+        {
+            System.out.print(a[i] + " ");
+        }
+        System.out.println();
+    }
+    
     /**
      * This methods creates a randomized array
      * @param size  The length of the randomized array

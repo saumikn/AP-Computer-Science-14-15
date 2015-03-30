@@ -1,20 +1,21 @@
 #BlueJ package file
 objectbench.height=76
 objectbench.width=662
-package.editor.height=400
+package.editor.height=141
 package.editor.width=560
-package.editor.x=98
-package.editor.y=377
+package.editor.x=998
+package.editor.y=729
 package.numDependencies=0
 package.numTargets=1
 package.showExtends=true
 package.showUses=true
 target1.editor.height=871
 target1.editor.width=743
-target1.editor.x=918
-target1.editor.y=22
+target1.editor.x=926
+target1.editor.y=28
 target1.height=50
 target1.name=Work7_1
+target1.naviview.expanded=true
 target1.showInterface=false
 target1.type=ClassTarget
 target1.typeParameters=
