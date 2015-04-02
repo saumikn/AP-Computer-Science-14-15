@@ -5,42 +5,59 @@ package Unit7;
  * and sorts them increasing and decreasing, respectively
  * 
  * @author Saumik Narayanan
- * @version 3/29/15
+ * @version 3/30/15
  */
 public class Work7_2
 {
     /**
-     * This method creates a randomized array, sorts it ascending,
-     * re-randomizes the array, and sorts it descending
+     * This method completes the worksheet on the
+     * Eagan High School AP Computer Science website
      */
     
     public static void main()
     {
         int length = 16;
         int[] a = randomArray(length);
-        printArray(a);
+        printArray(a);        
         sortBubbleUp(a);
+        printArray(a);
+        System.out.println();
+        
+        a = randomArray(length);
         printArray(a);
         sortBubbleDown(a);
         printArray(a);
+        System.out.println();
+        
+        a = randomArray(length);
+        printArray(a);
+        sortSelectionUp(a);
+        printArray(a);
+        System.out.println();
+        
+        a = randomArray(length);
+        printArray(a);
+        sortSelectionDown(a);
+        printArray(a);
+        System.out.println();
         
 
     }
     
     /**
-     * This methods sorts an array descending
+     * This methods sorts an array ascending using a selection sort
      * @param a The array to be sorted
+     * @return The sorted array
      */
     public static int[] sortSelectionUp(int[] a)
     {
-        int i;
         int tmp;
         int min;
         
         for(int j = 0; j < a.length - 1; j++)
         {
             min = j;
-            for(int i = j + 1; i < a.length - 1; i++)
+            for(int i = j + 1; i < a.length; i++)
             {
                 if(a[i] < a[min])
                 {
@@ -56,29 +73,37 @@ public class Work7_2
     }
     
     /**
-     * This methods sorts an array descending
+     * This methods sorts an array descending using a selection sort
      * @param a The array to be sorted
+     * @return The sorted array
      */
     public static int[] sortSelectionDown(int[] a)
     {
-        for(int pass = 0; pass < a.length; pass++)
+        int tmp;
+        int max;
+        
+        for(int j = 0; j < a.length - 1; j++)
         {
-            for(int i = 0; i < a.length - 1; i++)
+            max = j;
+            for(int i = j + 1; i < a.length; i++)
             {
-                if(a[i] < a[i+1])
+                if(a[i] > a[max])
                 {
-                    int tmp = a[i];
-                    a[i] = a[i+1];
-                    a[i+1] = tmp;
+                    max = i;
                 }
             }
+            tmp = a[max];
+            a[max] = a[j];
+            a[j] = tmp;
+            
         }
         return a;
     }
     
     /**
-     * This methods sorts an array descending
+     * This methods sorts an array ascending using a bubble sort
      * @param a The array to be sorted
+     * @return The sorted array
      */
     public static int[] sortBubbleUp(int[] a)
     {
@@ -98,8 +123,9 @@ public class Work7_2
     }
     
     /**
-     * This methods sorts an array descending
+     * This methods sorts an array descending using a bubble sort
      * @param a The array to be sorted
+     * @return The sorted array
      */
     public static int[] sortBubbleDown(int[] a)
     {
@@ -134,6 +160,7 @@ public class Work7_2
     /**
      * This methods creates a randomized array
      * @param size  The length of the randomized array
+     * @return The randomized array
      */
     public static int[] randomArray(int size)
     {
@@ -148,6 +175,7 @@ public class Work7_2
     /**
      * This methods creates a randomized number
      * @param a The number of possible values that the method can return
+     * @return The random number
      */
     public static int randomInt(int number)
     {
