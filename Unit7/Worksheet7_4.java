@@ -2,13 +2,16 @@ package Unit7;
 
 
 /**
- * Write a description of class Worksheet7_4 here.
+ * This class sorts an array of MyFriend objects in various ways
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Saumik Narayanan
+ * @version 4/7/15
  */
 public class Worksheet7_4
 {
+    /**
+     * This method creates an array of MyFriend objects, and sorts it
+     */
     public static void main()
     {
         MyFriend[] friend = new MyFriend[10];
@@ -24,30 +27,70 @@ public class Worksheet7_4
         friend[8] = new MyFriend("Ian", 8, randomInt(100));
         friend[9] = new MyFriend("Jan", 9, randomInt(100));
         
-        
+        printArray(friend);
+        sortLikability(friend);
+        printArray(friend);
+        sortSpeedDial(friend);
+        printArray(friend);
         
     }
     
-    public void sortLikability(MyFriend[] f)
+    /**
+     * This methods sorts an array by speed dial
+     * @param f The array to be sorted
+     * @return The sorted array
+     */
+    public static MyFriend[] sortSpeedDial(MyFriend[] f)
     {
-        for(int i = 0; i < f.length - 1; i++)
+        for(int j = 0; j < f.length; j++)
         {
-            if(f[i].getLikability() > f[i+1].getLikability())
+            for(int i = 0; i < f.length - 1; i++)
             {
-                MyFriend tmp = f[i];
-                f[i] = f[i+1];
-                f[i+1] = tmp;
+                if(f[i].getSpeedDial() > f[i+1].getSpeedDial())
+                {
+                    MyFriend tmp = f[i];
+                    f[i] = f[i+1];
+                    f[i+1] = tmp;
+                }
             }
         }
+        return f;
     }
     
-    public void printArray(MyFriend[] f)
+    /**
+     * This methods sorts an array by likability
+     * @param f The array to be sorted
+     * @return The sorted array
+     */
+    public static MyFriend[] sortLikability(MyFriend[] f)
+    {
+        for(int j = 0; j < f.length; j++)
+        {
+            for(int i = 0; i < f.length - 1; i++)
+            {
+                if(f[i].getLikability() > f[i+1].getLikability())
+                {
+                    MyFriend tmp = f[i];
+                    f[i] = f[i+1];
+                    f[i+1] = tmp;
+                }
+            }
+        }
+        return f;
+    }
+    
+    /**
+     * This methods prints an array
+     * @param f The array to be printed
+     */
+    public static void printArray(MyFriend[] f)
     {
         for(int i = 0; i < f.length; i++)
         {
             String string = f[i].toString();
-            System.out.println(string);
+            System.out.println(string);           
         }
+        System.out.println();
     }
     
     public static int randomInt(int number)

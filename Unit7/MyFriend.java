@@ -1,11 +1,10 @@
 package Unit7;
 
-
 /**
- * Write a description of class MyFriend here.
+ * Is a MyFriend object
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Saumik Narayanan
+ * @version 4/7/15
  */
 public class MyFriend
 {
@@ -22,23 +21,39 @@ public class MyFriend
         this.speedDial = speedDial;
         this.likability = likability;
     }
-    
+
+    /**
+     * This method returns a string that describes the MyFriend object
+     * @return The string that describes the MyFriend object
+     */
     public String toString()
     {
-        String string = name + " " + speedDial + " " + likability;
+        String string = name + "\t" + speedDial + "\t" + likability;
         return string;
     }
     
+    /**
+     * Gets the name of the MyFriend object
+     * @return The name of the MyFriend object
+     */
     public String getName()
     {
         return name;
     }
-    
+
+    /**
+     * Gets the speedDial of the MyFriend object
+     * @return The speedDialme of the MyFriend object
+     */
     public int getSpeedDial()
     {
         return speedDial;
     }
-    
+
+    /**
+     * Gets the likability of the MyFriend object
+     * @return The likability of the MyFriend object
+     */
     public int getLikability()
     {
         return likability;

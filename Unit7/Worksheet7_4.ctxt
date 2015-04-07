@@ -1,10 +1,16 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ main()
+comment0.text=\n\ This\ method\ creates\ an\ array\ of\ MyFriend\ objects,\ and\ sorts\ it\n
 comment1.params=f
-comment1.target=void\ sortLikability(MyFriend[])
+comment1.target=MyFriend[]\ sortSpeedDial(MyFriend[])
+comment1.text=\n\ This\ methods\ sorts\ an\ array\ by\ speed\ dial\n\ @param\ f\ The\ array\ to\ be\ sorted\n\ @return\ The\ sorted\ array\n
 comment2.params=f
-comment2.target=void\ printArray(MyFriend[])
-comment3.params=number
-comment3.target=int\ randomInt(int)
-numComments=4
+comment2.target=MyFriend[]\ sortLikability(MyFriend[])
+comment2.text=\n\ This\ methods\ sorts\ an\ array\ by\ likability\n\ @param\ f\ The\ array\ to\ be\ sorted\n\ @return\ The\ sorted\ array\n
+comment3.params=f
+comment3.target=void\ printArray(MyFriend[])
+comment3.text=\n\ This\ methods\ prints\ an\ array\n\ @param\ f\ The\ array\ to\ be\ printed\n
+comment4.params=number
+comment4.target=int\ randomInt(int)
+numComments=5
