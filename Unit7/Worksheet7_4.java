@@ -1,6 +1,5 @@
 package Unit7;
 
-
 /**
  * This class sorts an array of MyFriend objects in various ways
  * 
@@ -15,7 +14,7 @@ public class Worksheet7_4
     public static void main()
     {
         MyFriend[] friend = new MyFriend[10];
-        
+
         friend[0] = new MyFriend("An", 0, randomInt(100));
         friend[1] = new MyFriend("Ban", 1, randomInt(100));
         friend[2] = new MyFriend("Can", 2, randomInt(100));
@@ -26,15 +25,15 @@ public class Worksheet7_4
         friend[7] = new MyFriend("Han", 7, randomInt(100));
         friend[8] = new MyFriend("Ian", 8, randomInt(100));
         friend[9] = new MyFriend("Jan", 9, randomInt(100));
-        
+
         printArray(friend);
         sortLikability(friend);
         printArray(friend);
         sortSpeedDial(friend);
         printArray(friend);
-        
+
     }
-    
+
     /**
      * This methods sorts an array by speed dial
      * @param f The array to be sorted
@@ -56,7 +55,7 @@ public class Worksheet7_4
         }
         return f;
     }
-    
+
     /**
      * This methods sorts an array by likability
      * @param f The array to be sorted
@@ -78,7 +77,7 @@ public class Worksheet7_4
         }
         return f;
     }
-    
+
     /**
      * This methods prints an array
      * @param f The array to be printed
@@ -92,12 +91,16 @@ public class Worksheet7_4
         }
         System.out.println();
     }
-    
+
+    /**
+     * This methods creates a randomized number
+     * @param a The number of possible values that the method can return
+     * @return The random number
+     */
     public static int randomInt(int number)
     {
         int random = (int)(number * Math.random());
         return random;
     }
-    
-    
+
 }

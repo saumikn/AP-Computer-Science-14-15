@@ -13,4 +13,5 @@ comment3.target=void\ printArray(MyFriend[])
 comment3.text=\n\ This\ methods\ prints\ an\ array\n\ @param\ f\ The\ array\ to\ be\ printed\n
 comment4.params=number
 comment4.target=int\ randomInt(int)
+comment4.text=\n\ This\ methods\ creates\ a\ randomized\ number\n\ @param\ a\ The\ number\ of\ possible\ values\ that\ the\ method\ can\ return\n\ @return\ The\ random\ number\n
 numComments=5

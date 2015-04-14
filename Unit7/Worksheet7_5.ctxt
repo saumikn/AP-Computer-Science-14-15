@@ -1,6 +1,23 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ main()
-comment1.params=number
-comment1.target=int\ randomInt(int)
-numComments=2
+comment0.text=\n\ This\ method\ creates\ an\ array\ of\ MyFriend\ objects,\ and\ sorts\ it\n
+comment1.params=l
+comment1.target=void\ printMostLikable(java.util.ArrayList)
+comment1.text=\n\ This\ methods\ prints\ the\ most\ likable\ MyFriend\ objects\n\ @param\ l\ The\ array\ to\ be\ looked\ through\n
+comment2.params=l
+comment2.target=java.util.ArrayList\ removeLeastLikable(java.util.ArrayList)
+comment2.text=\n\ This\ methods\ removes\ the\ least\ likable\ MyFriend\ object\n\ @param\ l\ The\ ArrayList\ to\ be\ modified\n
+comment3.params=l
+comment3.target=java.util.ArrayList\ sortName(java.util.ArrayList)
+comment3.text=\n\ This\ methods\ sorts\ the\ ArrayList\ by\ name\n\ @param\ l\ The\ ArrayList\ to\ be\ sorted\n
+comment4.params=l
+comment4.target=java.util.ArrayList\ sortLikability(java.util.ArrayList)
+comment4.text=\n\ This\ methods\ sorts\ the\ ArrayList\ by\ likabiliy\n\ @param\ l\ The\ ArrayList\ to\ be\ sorted\n
+comment5.params=l
+comment5.target=void\ printArrayList(java.util.ArrayList)
+comment5.text=\n\ This\ methods\ prints\ the\ ArrayList\ of\ MyFriend\ objects\n\ @param\ l\ The\ ArrayList\ to\ be\ printed\n
+comment6.params=number
+comment6.target=int\ randomInt(int)
+comment6.text=\n\ This\ methods\ creates\ a\ randomized\ number\n\ @param\ a\ The\ number\ of\ possible\ values\ that\ the\ method\ can\ return\n\ @return\ The\ random\ number\n
+numComments=7
