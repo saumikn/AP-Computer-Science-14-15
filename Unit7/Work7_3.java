@@ -28,10 +28,18 @@ public class Work7_3
         iteration = 0;
         
         a = sortBubbleUp(a);
+        printArray(a);
         System.out.println("Bubble: " + iteration);
         iteration = 0;
         
-        // Question 3 - They are different because the second for loop goes through 16-1 times, not 16, so we get 16
+        a = optimizedSortBubbleUp(a);
+        printArray(a);
+        System.out.println("Optimized Bubble: " + iteration);
+        iteration = 0;
+        
+        // Question 3 - They are different because the second for loop goes through 16-1=15 times, not 16, 
+        // so we get 16*15=240
+        
         System.out.println();
         a = randomArray(1024);
         
@@ -45,9 +53,39 @@ public class Work7_3
         
         a = sortBubbleUp(a);
         System.out.println("Bubble: " + iteration);
-
+        
+        // Question 6 - They are different because the second for loop goes through 1024-1=1023 times, not 1024, 
+        // so we get 1024*1023=1047552. This difference is much larger, as the numbers we are dealing with are higher
     }
 
+    public static int[] optimizedSortBubbleUp(int[] a)
+    {
+        boolean isSorted = false;
+        for(int j = 0; j < a.length; j++)
+        {
+            if(isSorted)
+            {
+                break;
+            }
+            for(int i = j; i < a.length - 1; i++)
+            {
+                if(isSorted)
+                {
+                    break;
+                }
+                if(a[i] > a[i+1])
+                {
+                    int tmp = a[i];
+                    a[i] = a[i+1];
+                    a[i+1] = tmp;
+                }
+                
+                iteration++;
+            }
+        }
+        return a;
+    }
+    
     /**
      * This methods sorts an array descending using a insertion sort
      * @param a The array to be sorted
@@ -136,7 +174,7 @@ public class Work7_3
      */
     public static int[] sortBubbleUp(int[] a)
     {
-        for(int pass = 0; pass < a.length; pass++)
+        for(int j = 0; j < a.length; j++)
         {
             for(int i = 0; i < a.length - 1; i++)
             {
@@ -159,7 +197,7 @@ public class Work7_3
      */
     public static int[] sortBubbleDown(int[] a)
     {
-        for(int pass = 0; pass < a.length; pass++)
+        for(int j = 0; j < a.length; j++)
         {
             for(int i = 0; i < a.length - 1; i++)
             {
