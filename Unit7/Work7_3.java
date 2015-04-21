@@ -5,7 +5,7 @@ package Unit7;
  * and sorts them increasing and decreasing, respectively
  * 
  * @author Saumik Narayanan
- * @version 4-14-15
+ * @version 4-20-15
  */
 public class Work7_3
 {
@@ -18,74 +18,80 @@ public class Work7_3
     public static void main()
     {
         int[] a = randomArray(16);
-        
+        printArray(a);
+
         a = sortInsertionUp(a);
         System.out.println("Insertion: " + iteration);
         iteration = 0;
-        
+        a = randomArray(16);
+
         a = sortSelectionUp(a);
         System.out.println("Selection: " + iteration);
         iteration = 0;
-        
+        a = randomArray(16);
+
         a = sortBubbleUp(a);
-        printArray(a);
         System.out.println("Bubble: " + iteration);
         iteration = 0;
-        
+        a = randomArray(16);
+
         a = optimizedSortBubbleUp(a);
-        printArray(a);
         System.out.println("Optimized Bubble: " + iteration);
         iteration = 0;
-        
+        a = randomArray(16);
+
         // Question 3 - They are different because the second for loop goes through 16-1=15 times, not 16, 
         // so we get 16*15=240
-        
+
         System.out.println();
         a = randomArray(1024);
-        
+
+
         a = sortInsertionUp(a);
         System.out.println("Insertion: " + iteration);
         iteration = 0;
-        
+        a = randomArray(1024);
+
         a = sortSelectionUp(a);
         System.out.println("Selection: " + iteration);
         iteration = 0;
+        a = randomArray(1024);
         
+        a = sortSelectionDown(a);
+        System.out.println("Selection: " + iteration);
+        iteration = 0;
+        a = randomArray(1024);
+
         a = sortBubbleUp(a);
         System.out.println("Bubble: " + iteration);
-        
+
         // Question 6 - They are different because the second for loop goes through 1024-1=1023 times, not 1024, 
         // so we get 1024*1023=1047552. This difference is much larger, as the numbers we are dealing with are higher
     }
 
     public static int[] optimizedSortBubbleUp(int[] a)
     {
-        boolean isSorted = false;
+        boolean isSorted = true;
         for(int j = 0; j < a.length; j++)
         {
-            if(isSorted)
+            iteration++;
+            for(int i = 0; i < a.length - 1; i++)
             {
-                break;
-            }
-            for(int i = j; i < a.length - 1; i++)
-            {
-                if(isSorted)
-                {
-                    break;
-                }
+                iteration++;
                 if(a[i] > a[i+1])
                 {
+                    isSorted = false;
                     int tmp = a[i];
                     a[i] = a[i+1];
                     a[i+1] = tmp;
                 }
-                
-                iteration++;
             }
+            if(isSorted)
+                break;
         }
         return a;
     }
-    
+
     /**
      * This methods sorts an array descending using a insertion sort
      * @param a The array to be sorted
@@ -96,15 +102,16 @@ public class Work7_3
 
         for(int j = 1; j < a.length; j ++)
         {
+            iteration++;
             int i = j;
             int tmp = a[i];
             while( i > 0 && a[i-1] > tmp)
             {
+                iteration++;
                 a[i] = a[i-1];
-                i--;
+                i--;                
             }
             a[i] = tmp;
-            iteration++;
         }
         return a;
     }
@@ -150,14 +157,15 @@ public class Work7_3
 
         for(int j = 0; j < a.length; j++)
         {
+            iteration++;
             max = j;
             for(int i = j + 1; i < a.length - 1; i++)
             {
+                iteration++;
                 if(a[i] > a[max])
                 {
                     max = i;
                 }
-                iteration++;
             }
             tmp = a[max];
             a[max] = a[j];
@@ -176,15 +184,16 @@ public class Work7_3
     {
         for(int j = 0; j < a.length; j++)
         {
+            iteration++;
             for(int i = 0; i < a.length - 1; i++)
             {
+                iteration++;
                 if(a[i] > a[i+1])
                 {
                     int tmp = a[i];
                     a[i] = a[i+1];
                     a[i+1] = tmp;
                 }
-                iteration++;
             }
         }
         return a;
@@ -199,15 +208,16 @@ public class Work7_3
     {
         for(int j = 0; j < a.length; j++)
         {
+            iteration++;
             for(int i = 0; i < a.length - 1; i++)
             {
+                iteration++;
                 if(a[i] < a[i+1])
                 {
                     int tmp = a[i];
                     a[i] = a[i+1];
                     a[i+1] = tmp;
                 }
-                iteration++;
             }
         }
         return a;
