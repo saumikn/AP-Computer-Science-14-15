@@ -40,8 +40,8 @@ public class Work7_3
         iteration = 0;
         a = randomArray(16);
 
-        // Question 3 - They are different because the second for loop goes through 16-1=15 times, not 16, 
-        // so we get 16*15=240
+        // Question 3 - Bubble matches the prediction, as it is very inefficient. Selection sort is 16*15, not 16*16, so it 
+        // becomes 240 instead of 256
 
         System.out.println();
         a = randomArray(1024);
